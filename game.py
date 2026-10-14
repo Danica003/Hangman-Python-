@@ -1,3 +1,8 @@
+def load_words(path):
+    with open(path,"r") as file:                #ovako se otvaraju fajlovi, garantuju zatvaranje na kraju. "r" redudantno, mozes i bez njega jer je to default
+        return file.read().split()              #file je fajlovski tip. read() cita sve u fajlu kao jedan string, split() razbije sve i napravi listu. tako da ovo vraca listu stringova :D
+ 
+
 class Game:
     def __init__(self, word):                   # konstruktor
         self.word=word                          # rec koju pogadjamo
@@ -22,7 +27,6 @@ class Game:
             self.victory = True
         elif self.tries == 6:
             self.loss=True
-
 
 
 
