@@ -29,7 +29,3 @@ class Game:
             self.loss=True
 
 
-
-
-
-
