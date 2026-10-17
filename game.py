@@ -27,5 +27,6 @@ class Game:
             self.victory = True
         elif self.tries == 6:
             self.loss=True
-
+    def masked(self):                          #shapeuje kako vraca pogodjena slova (apple - a _ _ l _)
+        return " ".join(ch if g else "_" for ch, g in zip(self.word, self.guessed))
 
